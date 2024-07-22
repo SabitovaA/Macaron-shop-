@@ -19,13 +19,15 @@ const cartSlice = createSlice({
         });
       }
     },
-    addProductToFavoriet: (state, action) => {
-      const isFavouritet = state.favourite.every((el) => action.payload.ID !== el.ID);
+    addProductToFavoriet: (state, {payload}) => {
+      const isFavouritet = state.favourite.every((el) => payload.ID !== el.ID);
       if (isFavouritet) {
         state.favourite.push({
-          ...action.payload,
+          ...payload,
           favourite:true
         });
+      }else{
+        state.favourite = state.favourite.filter(el => el.ID !== payload.ID)
       }
     },
     deleteProduct: (state, action) => {

@@ -19,6 +19,12 @@
     color: black;
     cursor: pointer;
 }
+.log__icon{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-bottom: -5px;
+}
 .logo{
     margin-right: -35px;
 }

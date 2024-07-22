@@ -53,4 +53,7 @@
   cursor: pointer;
   font-size: 16px;
 }
+.product__favouriteActive{
+  font-size: 30px;
+}
   

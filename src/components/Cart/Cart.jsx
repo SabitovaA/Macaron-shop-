@@ -7,11 +7,11 @@ import {
   deleteProduct,
   incrementProduct,
 } from "../../redux/CartSlice.jsx";
-import { NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
+import Button from "../../UI/button/Button.jsx";
 
 function Cart() {
   const { cart: cartProducts } = useSelector(cartSelector);
-  console.log(cartProducts);
   const dispatch = useDispatch();
   const deleteProducts = (product) => {
     dispatch(deleteProduct(product));
@@ -32,7 +32,6 @@ function Cart() {
   }, 0);
 
   return (
-    <>
       <div className={cls.cart__container}>
         <div className={cls.products__page}>
           {cartProducts &&
@@ -42,39 +41,23 @@ function Cart() {
                 <h3>{item.name}</h3>
                 <p>{item.totalSum}$</p>
                 <div className={cls.counter}>
-                     <button
-                       onClick={() => decrementProducts(item)}
-                       className={cls.counter__button}
-                       >
-                       -
-                     </button>
+                    <Button onClick={() => decrementProducts(item)} value={'-'}/>
                      <p>{item.count}</p>
-                     <button
-                       onClick={() => incrementProducts(item)}
-                       className={cls.counter__button}
-                       >
-                       +
-                     </button>
+                    <Button onClick={() => incrementProducts(item)} value={'+'}/>
                      </div>
-                     <button
-                       onClick={() => deleteProducts(item)}
-                       className={cls.delete}
-                     >
-                       x
-                     </button>
+                    <Button onClick={() => deleteProducts(item)} value={'x'} classButton={'delete'}/>
               </div>
             ))}
         </div>
         <div className={cls.sum__products}>
           <p>Total products:{totalProducts}</p>
           <p>Total Summe:{totalSumProducts}$</p>
-          <button className={cls.order}>Order now</button>
-          <button className={cls.order__more}>Order more</button>
+          <NavLink className={cls.link} to="/order" >Order now</NavLink>
+          <NavLink className={cls.link} to={'/'}>Order more</NavLink>
           <p className={cls.contact}>Do you have any questions? </p>
           <a href="">CONTACT US</a>
         </div>
       </div>
-    </>
   );
 }
 

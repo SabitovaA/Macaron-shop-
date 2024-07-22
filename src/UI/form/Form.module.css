@@ -1,0 +1,10 @@
+.error__messege{
+    font-size: 10px;
+    color: red;
+}
+.name__input{
+    padding:5px;
+}
+.input__long {
+    width: 100%;
+}

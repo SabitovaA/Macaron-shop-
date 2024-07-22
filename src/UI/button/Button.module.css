@@ -1,0 +1,17 @@
+.counter__button {
+    padding: 0 10px;
+    background-color: #f7f7f7;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+} 
+.delete {
+    position: absolute;
+    top: -7px;
+    right: -4px;
+    border-radius: 50%;
+    background-color:rgb(155, 193, 222);
+    border: none;
+    padding: 0 4px;
+    color: black;
+}  

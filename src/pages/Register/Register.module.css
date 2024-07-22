@@ -1,0 +1,56 @@
+.container__register {
+  padding: 190px 40px 40px 40px;
+  background-color: #f7f7f7;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register__box {
+  border: 1px solid black;
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.register__button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: rgb(80, 147, 198);
+  cursor: pointer;
+}
+.register__button:disabled{
+    background-color:rgb(179, 211, 235);
+    cursor: default;
+}
+.account__register {
+  font-size: 12px;
+}
+.login {
+  font-size: 12px;
+  margin-left: 5px;
+}
+.checkbox__box {
+  display: flex;
+  gap: 5px;
+}
+.name {
+   width: 100%; 
+  display: flex;
+  flex-direction: column;
+}
+.name_container {
+    display: flex;
+    width: 100%;
+}
+.input__with_error{
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+.long {
+  width: 100%;
+}

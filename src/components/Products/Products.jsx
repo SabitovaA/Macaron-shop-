@@ -8,7 +8,6 @@ import { HiMiniHeart } from "react-icons/hi2";
 function Products() {
   const [favourites, setFavourites] = useState({});
    const dispatch = useDispatch()
-
    const addProductToCart = (product) => {
       dispatch(addProduct(product))
    }
@@ -19,6 +18,7 @@ function Products() {
       [product.ID]: !prevFavourites[product.ID],
     }));
   }
+
   return (
     <div className={cls.products__container}>
       {cart &&
